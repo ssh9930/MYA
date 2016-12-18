@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A21D3902-9C09-478E-8869-1D522DDB43E6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>MYA.My.MyApplication</StartupObject>
+    <RootNamespace>MYA</RootNamespace>
+    <AssemblyName>MYA</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>게시\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>build\</OutputPath>
+    <DocumentationFile>MYA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>MYA.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MYA_original.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="src\adb-control\apkmanager\apkmanager.vb" />
+    <Compile Include="src\adb-control\filemanager\io_filesystem\List.vb" />
+    <Compile Include="src\adb-control\filemanager\io_filesystem\Make.vb" />
+    <Compile Include="src\MYA-Interface.vb" />
+    <Compile Include="src\MYA\Events.vb" />
+    <Compile Include="src\adb-control\ADB.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\adb-control\filemanager\io_filesystem\Copy.vb" />
+    <Compile Include="src\adb-control\filemanager\io_filesystem\Delete.vb" />
+    <Compile Include="src\adb-control\filemanager\io_filesystem\Info.vb" />
+    <Compile Include="src\adb-control\filemanager\io_filesystem\Move.vb" />
+    <Compile Include="src\adb-control\filemanager\io_filesystem\Permission.vb" />
+    <Compile Include="src\adb-control\filemanager\io_filesystem\Rename.vb" />
+    <Compile Include="src\adb-control\filemanager\io_sync\ADBpull.vb" />
+    <Compile Include="src\adb-control\filemanager\io_sync\ADBpush.vb" />
+    <Compile Include="src\adb-control\filemanager\Window\MainFileMgrWnd\MainFileMgrWnd.Designer.vb">
+      <DependentUpon>MainFileMgrWnd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\adb-control\filemanager\Window\MainFileMgrWnd\MainFileMgrWnd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\adb-control\inputmanager\inputmanager.vb" />
+    <Compile Include="src\adb-control\phoneinfo\phoneinfo.vb" />
+    <Compile Include="src\adb-control\powermanager\powermanager.vb" />
+    <Compile Include="src\adb-control\processmanager\processmanager.vb" />
+    <Compile Include="src\adb-control\remoteshell\remoteshell.vb" />
+    <Compile Include="src\adb-control\screenmanager\screenmanager.vb" />
+    <Compile Include="src\adb-control\sideload\sideload.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="src\exception-control\ExceptionManager.vb" />
+    <Compile Include="src\exception-control\ExceptionWnd\ExceptionWnd.Designer.vb">
+      <DependentUpon>ExceptionWnd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\exception-control\ExceptionWnd\ExceptionWnd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\fastboot-control\Fastboot.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\fastboot-control\flashmanager\flashmanager.vb" />
+    <Compile Include="src\fastboot-control\phoneinfo\phoneinfo.vb" />
+    <Compile Include="src\fastboot-control\powermanager\powermanager.vb" />
+    <Compile Include="src\fastboot-control\shell.vb" />
+    <Compile Include="src\Window\ContentPanelBase.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\Window\ContentPanelWnd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Window\forms\ChangelogForm\ChangelogForm.Designer.vb">
+      <DependentUpon>ChangelogForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Window\forms\ChangelogForm\ChangelogForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Window\forms\PathSettingForm\PathSettingForm.Designer.vb">
+      <DependentUpon>PathSettingForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Window\forms\PathSettingForm\PathSettingForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Window\forms\UnauthorizedDeviceForm\UnauthourizedDeviceForm.Designer.vb">
+      <DependentUpon>UnauthourizedDeviceForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Window\forms\UnauthorizedDeviceForm\UnauthourizedDeviceForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\MYA-update\Changelog.vb" />
+    <Compile Include="src\MYA-update\CheckUpdate.vb" />
+    <Compile Include="src\MYA-update\Update.vb" />
+    <Compile Include="src\MYA-update\UpdateWnd\UpdateWnd.Designer.vb">
+      <DependentUpon>UpdateWnd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\MYA-update\UpdateWnd\UpdateWnd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\MYA\etc.vb" />
+    <Compile Include="src\MYA\Startup.vb" />
+    <Compile Include="src\MYA\StringExtension.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\adb-control\filemanager\Window\MainFileMgrWnd\MainFileMgrWnd.resx">
+      <DependentUpon>MainFileMgrWnd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Window\ContentPanelWnd.resx">
+      <DependentUpon>ContentPanelWnd.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4%28x86 및 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="src\adb-control\phone\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MYA_original.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="ADBpath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FBPath" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ADB_usb" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">AdbWinUsbApi.dll</Value>
+    </Setting>
+    <Setting Name="ADB_win" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">AdbWinApi.dll</Value>
+    </Setting>
+    <Setting Name="ADB_exe" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">adb.exe</Value>
+    </Setting>
+    <Setting Name="FB_exe" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">fastboot.exe</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
