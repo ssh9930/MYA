@@ -83,5 +83,19 @@
 
     End Function
 
+    Public Function IsBusyboxInstalled() As Boolean 'WARNING : THIS METHMOD DOESN'T WORK.
+
+        If New ADB().ADBExecute("busybox").Contains("not found") Then
+
+            Return False
+
+        Else
+
+            Return True
+
+        End If
+
+    End Function
+
 
 End Class

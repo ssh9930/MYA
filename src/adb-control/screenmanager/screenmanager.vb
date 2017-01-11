@@ -1,7 +1,7 @@
 ﻿Namespace adb_control
     Namespace screenmanager
 
-        Class screenshot
+        Class ScreenShot
 
             Private adb_ As New ADB()
 
@@ -27,7 +27,7 @@
             End Function
         End Class
 
-        Class screenrecord
+        Class Screenecord
 
             'only supports device that is higher than 4.4.2
             'WARN: radicaly causes video courruption problem. may seems to be a adb kill problem.

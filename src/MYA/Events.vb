@@ -26,6 +26,7 @@
 
             For Each i In TerminateStr : DecoText += "*" : Next
             LOG_(vbCrLf + DecoText + vbCrLf + TerminateStr + vbCrLf + DecoText + vbCrLf)
+
             LOG_("Ending all threads")
             End
 

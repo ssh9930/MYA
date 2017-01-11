@@ -24,19 +24,15 @@ Namespace My
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Public Sub New()
             MyBase.New(Global.Microsoft.VisualBasic.ApplicationServices.AuthenticationMode.Windows)
-            Me.IsSingleInstance = False
-            Me.EnableVisualStyles = True
-            Me.SaveMySettingsOnExit = True
-            Me.ShutdownStyle = Global.Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterAllFormsClose
+            Me.IsSingleInstance = false
+            Me.EnableVisualStyles = true
+            Me.SaveMySettingsOnExit = true
+            Me.ShutDownStyle = Global.Microsoft.VisualBasic.ApplicationServices.ShutdownMode.AfterAllFormsClose
         End Sub
-
-        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>
+        
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.MYA.FileManagerWnd
-        End Sub
-
-        Protected Overridable Sub OnAllFormsClose()
-            MsgBox("f")
+            Me.MainForm = Global.MYA.MasterWnd
         End Sub
     End Class
 End Namespace

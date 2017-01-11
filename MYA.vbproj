@@ -75,6 +75,7 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
@@ -112,12 +113,6 @@
     <Compile Include="src\adb-control\filemanager\io_filesystem\Rename.vb" />
     <Compile Include="src\adb-control\filemanager\io_sync\ADBpull.vb" />
     <Compile Include="src\adb-control\filemanager\io_sync\ADBpush.vb" />
-    <Compile Include="src\adb-control\filemanager\Window\MainFileMgrWnd\MainFileMgrWnd.Designer.vb">
-      <DependentUpon>MainFileMgrWnd.vb</DependentUpon>
-    </Compile>
-    <Compile Include="src\adb-control\filemanager\Window\MainFileMgrWnd\MainFileMgrWnd.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="src\adb-control\inputmanager\inputmanager.vb" />
     <Compile Include="src\adb-control\phoneinfo\phoneinfo.vb" />
     <Compile Include="src\adb-control\powermanager\powermanager.vb" />
@@ -154,11 +149,20 @@
     <Compile Include="src\fastboot-control\phoneinfo\phoneinfo.vb" />
     <Compile Include="src\fastboot-control\powermanager\powermanager.vb" />
     <Compile Include="src\fastboot-control\shell.vb" />
-    <Compile Include="src\Window\ContentPanelBase.vb">
+    <Compile Include="src\Window\Controls\BorderButton.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="src\Window\ContentPanelWnd.vb">
+    <Compile Include="src\Window\Controls\BorderPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\Window\Controls\ContentPanelBase.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\Window\Controls\ContentPanelWnd.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Window\Controls\SeguoUI_Label.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="src\Window\forms\ChangelogForm\ChangelogForm.Designer.vb">
       <DependentUpon>ChangelogForm.vb</DependentUpon>
@@ -190,6 +194,12 @@
     <Compile Include="src\MYA\etc.vb" />
     <Compile Include="src\MYA\Startup.vb" />
     <Compile Include="src\MYA\StringExtension.vb" />
+    <Compile Include="src\Window\Window\MasterWnd\MasterWnd.Designer.vb">
+      <DependentUpon>MasterWnd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="src\Window\Window\MasterWnd\MasterWnd.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -198,11 +208,11 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\adb-control\filemanager\Window\MainFileMgrWnd\MainFileMgrWnd.resx">
-      <DependentUpon>MainFileMgrWnd.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="src\Window\ContentPanelWnd.resx">
+    <EmbeddedResource Include="src\Window\Controls\ContentPanelWnd.resx">
       <DependentUpon>ContentPanelWnd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\Window\Window\MasterWnd\MasterWnd.resx">
+      <DependentUpon>MasterWnd.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -242,6 +252,29 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="MYA_original.ico" />
+    <None Include="Resources\MYA_original.png" />
+    <None Include="Resources\ic_open_in_browser_black_24dp.png" />
+    <None Include="Resources\WLAN.png" />
+    <None Include="Resources\Warning.png" />
+    <None Include="Resources\Update.png" />
+    <None Include="Resources\Up.png" />
+    <None Include="Resources\Shell.png" />
+    <None Include="Resources\Settings.png" />
+    <None Include="Resources\Search.png" />
+    <None Include="Resources\Right.png" />
+    <None Include="Resources\Process.png" />
+    <None Include="Resources\Power.png" />
+    <None Include="Resources\PhoneInfo.png" />
+    <None Include="Resources\Link.png" />
+    <None Include="Resources\Left.png" />
+    <None Include="Resources\Input.png" />
+    <None Include="Resources\ic_stay_current_portrait_black_24dp.png" />
+    <None Include="Resources\ic_info_black_24dp.png" />
+    <None Include="Resources\Folder.png" />
+    <None Include="Resources\File.png" />
+    <None Include="Resources\Down.png" />
+    <None Include="Resources\Camera.png" />
+    <None Include="Resources\Apps.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -9,6 +9,11 @@
     Public EXPLORER_NULL_STRING As String = "//NO_//DATA_//"
     Public EXPLORER_CORRUPTED_STRING As String = "//CORRUPTED_//DATA_//"
 
+    Public ApplicationExecuted As Boolean = False
+    Public MYALaunched As Boolean = False
+
+    Public DefaultMYAFontName As String = "Segoe UI"
+
     Enum EXPLORER_CONTENT_TYPE
 
         Directory
@@ -29,7 +34,7 @@
         True 'MUST DISABLE WHEN PUBLIC RELEASE
 
     Public EnableDbgLogSave As Boolean =
-         True 'MUST DISABLE WHEN PUBLIC RELEASE
+         False 'MUST DISABLE WHEN PUBLIC RELEASE
 
     Public EnableBetaChk As Boolean =
         False 'Test Feature

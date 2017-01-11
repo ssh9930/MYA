@@ -8,7 +8,7 @@ Imports System.Runtime.InteropServices
 
 ' 어셈블리 특성 값을 검토합니다.
 
-<Assembly: AssemblyTitle("Android management tool using adb and fastboot based on .NET framework.")>
+<Assembly: AssemblyTitle("MYA")>
 <Assembly: AssemblyDescription("Android management tool using adb and fastboot based on .NET framework.")>
 <Assembly: AssemblyCompany("SwfitTeam")>
 <Assembly: AssemblyProduct("MYA")>

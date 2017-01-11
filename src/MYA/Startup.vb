@@ -30,6 +30,11 @@ Public Class Startup
 
         For Each i In LaunchStr : DecoText += "*" : Next
         LOG_(vbCrLf + DecoText + vbCrLf + LaunchStr + vbCrLf + DecoText + vbCrLf)
+
+        'set ApliicationcationExecuted
+        LOG_("ApliicationcationExecuted = True")
+        ApplicationExecuted = True
+
         'check files
         LOG_("FileCheck start")
 
@@ -41,7 +46,11 @@ Public Class Startup
         End If
         LOG_("Testing adb and fastboot status")
         TestProcess()
+
         'Finished.
+        'MYA Successfuly launched.
+        LOG_("MYALaunched = True")
+        MYALaunched = True
 
     End Sub
 
@@ -99,6 +108,9 @@ Public Class Startup
         Return False = ADB_Safelock
     End Function
     Public Sub TestProcess()
+
+Retry:
+
         'TODO: multi device support
 
         Dim ADBTester As New ADB
@@ -107,23 +119,36 @@ Public Class Startup
 
         Select Case True
 
-            Case DeviceStatus.Contains("unauthorized")
+            Case DeviceStatus = ("unauthorized")
 
                 'warn: this is temporary code for check device status.
                 'TODO: finish this code
 
-                MsgBox("Device unauthorized. please check the confimation dialog on your device.",
-                       vbInformation, "Confirmtion error")
+                If MessageBox.Show("Device unauthorized. please check the confimation dialog on your device.", "Device unauthorized",
+                                MessageBoxButtons.RetryCancel, MessageBoxIcon.Information) = vbRetry Then
+
+                    GoTo Retry
+
+                End If
+
                 ADB_Safelock = True
                 End
+                'daemon not running. starting it now
 
-            Case Raw.Replace(" ", "").Replace("   ", "").Replace(vbCrLf, "") = "Listofdevicesattached" Or
-                    DeviceStatus.Contains("offline")
+            Case DeviceStatus.Replace(" ", "").Replace(vbCrLf, "") = "d"
 
-                'warn: this is temporary code for check device status.
-                'TODO: finish this code
-                MsgBox("Device not found. check your device connected to the computer." _
-                     , vbCritical, "Device not found")
+
+                'warn: this is temporary code for cstatus.
+                'TODO: finish this code   heck your device connected to the computer." _
+                ', vbCritical, "Device not found")
+
+                If MessageBox.Show("Device not found. Check Your device connected to computer properly.", "Device not found",
+                                MessageBoxButtons.RetryCancel, MessageBoxIcon.Error
+                                ) = vbRetry Then
+
+                    GoTo Retry
+
+                End If
 
                 ADB_Safelock = True
                 End
@@ -132,6 +157,7 @@ Public Class Startup
         End Select
         'warn: this is temporary code for test codes.
         'MsgBox("start!")
+
         'Dim aa As New adb_control.screenmanager.screenrecord
         'aa.RecordScreen("/sdcard/.a.vid", True, 10000, "c:\users\ssh99\desktop\a.mp4")
         'a.StartProcess("bootanimation")

@@ -1,1 +1,12 @@
 C:\Users\ssh99\Desktop\SwiftTeam\MYA\MYA\MYA\build\MYA.exe.config
+C:\Users\ssh99\Desktop\SwiftTeam\MYA\MYA\MYA\build\MYA.exe
+C:\Users\ssh99\Desktop\SwiftTeam\MYA\MYA\MYA\build\MYA.pdb
+C:\Users\ssh99\Desktop\SwiftTeam\MYA\MYA\MYA\build\MYA.xml
+C:\Users\ssh99\Desktop\SwiftTeam\MYA\MYA\MYA\obj\Debug\MYA.vbprojResolveAssemblyReference.cache
+C:\Users\ssh99\Desktop\SwiftTeam\MYA\MYA\MYA\obj\Debug\MYA.Resources.resources
+C:\Users\ssh99\Desktop\SwiftTeam\MYA\MYA\MYA\obj\Debug\MYA.MYAWindow.ContentPanelWnd.resources
+C:\Users\ssh99\Desktop\SwiftTeam\MYA\MYA\MYA\obj\Debug\MYA.vbproj.GenerateResource.Cache
+C:\Users\ssh99\Desktop\SwiftTeam\MYA\MYA\MYA\obj\Debug\MYA.exe
+C:\Users\ssh99\Desktop\SwiftTeam\MYA\MYA\MYA\obj\Debug\MYA.xml
+C:\Users\ssh99\Desktop\SwiftTeam\MYA\MYA\MYA\obj\Debug\MYA.pdb
+C:\Users\ssh99\Desktop\SwiftTeam\MYA\MYA\MYA\obj\Debug\MYA.MasterWnd.resources

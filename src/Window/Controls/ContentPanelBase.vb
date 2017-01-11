@@ -1,5 +1,5 @@
-﻿Namespace MYAWindow
-    Public Class ContentPanel : Inherits System.Windows.Forms.Panel
+﻿
+Public Class ContentPanel : Inherits System.Windows.Forms.Panel
 
         'NOTE : this is a base class for content panel (ex : filemgrpanel, shellpanel)
 
@@ -28,7 +28,8 @@
 
         Private Sub OnMasterWndClose() Handles MasterWindow.Closed
 
-            Me.Dispose()
+        LOG_("MasterWndClose for :" + MasterWindow.Name)
+        Me.Dispose()
 
         End Sub
 
@@ -42,4 +43,4 @@
         End Sub
 
     End Class
-End Namespace
+

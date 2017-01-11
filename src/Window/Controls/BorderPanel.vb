@@ -2,12 +2,12 @@
 
     Public BorderSize As Integer = 1
 
-    Private Right_ As New Panel
-    Private Left_ As New Panel
-    Private Top_ As New Panel
-    Private Bot_ As New Panel
+    Private Right_ As New Control
+    Private Left_ As New Control
+    Private Top_ As New Control
+    Private Bot_ As New Control
 
-    Private BorderColor As System.Drawing.Color = System.Drawing.Color.FromArgb(Me.BackColor.R - 30, Me.BackColor.R - 30, Me.BackColor.R - 30)
+    Private BorderColor As System.Drawing.Color = System.Drawing.Color.FromArgb(Me.BackColor.R - 30, Me.BackColor.G - 30, Me.BackColor.B - 30)
 
     Sub New()
 
@@ -20,7 +20,6 @@
         Me.Controls.Add(Left_)
         Me.Controls.Add(Top_)
         Me.Controls.Add(Bot_)
-
 
     End Sub
 

@@ -1,6 +1,6 @@
 ﻿Imports System.IO
 Namespace adb_control
-    Public Class processmanager
+    Public Class ProcessManager
 
         Dim adb_ As New ADB
         Private Raw As String = ""
@@ -38,8 +38,8 @@ Namespace adb_control
             adb_.ADBExecute("shell top -n 1", False, True)
 
             While Not adb_.StandardOutput.EndOfStream
-                    Raw__ += vbCrLf + adb_.StandardOutput.ReadLine()
-                End While
+                Raw__ += vbCrLf + adb_.StandardOutput.ReadLine()
+            End While
 
             Raw = Raw__
         End Sub
